@@ -101,7 +101,6 @@ func load_json_results():
 func prepare_result(wheel_result_id):
 	var spin = spin_results[wheel_result_id]
 	file_type = spin[SpinResultGenerator.FILETYPE]
-	
 	var formatted_text = "[wave][rainbow]" + spin[SpinResultGenerator.TEXT] + "[/rainbow][/wave]"
 	TEXTLABEL.set_text(formatted_text)
 	

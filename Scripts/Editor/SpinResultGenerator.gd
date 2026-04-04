@@ -261,7 +261,6 @@ func create_file_explorer(file_mode = FileDialog.FILE_MODE_OPEN_FILE, access = F
 	file_dialog.set_use_native_dialog(true)
 	file_dialog.set_title(title)
 	file_dialog.set_access(access)
-	file_dialog.set_customization_flag_enabled(FileDialog.CUSTOMIZATION_DELETE, false)
 	file_dialog.set_file_mode(file_mode)
 	file_dialog.set_meta("_created_by", self)
 	
