@@ -1,197 +1,197 @@
 [
   {
-    "fileext": "ogg",
-    "filepath": "res://Assets/Audio/Tracks/bark.ogg",
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/BALD.png",
+    "fileext": "png",
+    "text": "BALD"
+  },
+  {
     "filetype": "aud",
+    "filepath": "res://Assets/Audio/Tracks/bark.ogg",
+    "fileext": "ogg",
     "text": "Bark"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/TommyHONKNoEffect.png",
     "filetype": "img",
-    "text": "Gun"
-  },
-  {
-    "chromacolor": "(0.0863, 0.9961, 0.0588, 1.0)",
-    "fadeamount": 0.35,
-    "fileext": "webm",
-    "filepath": "res://Assets/Videos/videoshortersmall.webm",
-    "filetype": "vid",
-    "pickuprange": 0.5,
-    "text": "Mpreg"
-  },
-  {
-    "chromacolor": "(0.0118, 0.0118, 0.0118, 1.0)",
-    "fadeamount": 0.1,
-    "fileext": "webm",
-    "filepath": "res://Assets/Videos/Fur.webm",
-    "filetype": "vid",
-    "pickuprange": 0.1,
-    "text": "Furry"
-  },
-  {
-    "chromacolor": "(1.0, 1.0, 1.0, 0.0)",
-    "fadeamount": 0.1,
-    "fileext": "webm",
-    "filepath": "res://Assets/Videos/Gamma.webm",
-    "filetype": "vid",
-    "pickuprange": 0.1,
-    "text": "Gamma"
-  },
-  {
-    "chromacolor": "(0.0, 0.0, 0.0, 1.0)",
-    "fadeamount": 0.1,
-    "fileext": "webm",
-    "filepath": "res://Assets/Videos/Train.webm",
-    "filetype": "vid",
-    "pickuprange": 0.01,
-    "text": "Train"
-  },
-  {
-    "chromacolor": "(0.0078, 0.0078, 0.0078, 1.0)",
-    "fadeamount": 0.1,
-    "fileext": "webm",
-    "filepath": "res://Assets/Videos/WhiteSedan.webm",
-    "filetype": "vid",
-    "pickuprange": 0.01,
-    "text": "White Sedan"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/PurpleCat.png",
-    "filetype": "img",
-    "text": "Cat"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/BALD.png",
-    "filetype": "img",
-    "text": "Bald"
-  },
-  {
-    "fileext": "png",
     "filepath": "res://Assets/Sprites/Bat.png",
-    "filetype": "img",
+    "fileext": "png",
     "text": "Bat"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/beef.png",
     "filetype": "img",
+    "filepath": "res://Assets/Sprites/beef.png",
+    "fileext": "png",
     "text": "Beef"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Birb.png",
     "filetype": "img",
-    "text": "Bird"
+    "filepath": "res://Assets/Sprites/Birb.png",
+    "fileext": "png",
+    "text": "Birb"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/BORGOR.png",
     "filetype": "img",
+    "filepath": "res://Assets/Sprites/BORGOR.png",
+    "fileext": "png",
     "text": "BORGOR"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Broccoli.png",
     "filetype": "img",
+    "filepath": "res://Assets/Sprites/Broccoli.png",
+    "fileext": "png",
     "text": "Broccoli"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Cap.png",
     "filetype": "img",
+    "filepath": "res://Assets/Sprites/Cap.png",
+    "fileext": "png",
     "text": "Cap"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/FriedChicken.png",
     "filetype": "img",
-    "text": "Chicken"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Frog.png",
-    "filetype": "img",
-    "text": "Frog"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Goat.png",
-    "filetype": "img",
-    "text": "Goat"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Rock.png",
-    "filetype": "img",
-    "text": "Rock"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/SeaOtter.png",
-    "filetype": "img",
-    "text": "Sea Otter"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Steel(ish)Rabbit.png",
-    "filetype": "img",
-    "text": "Steel Rabbit"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/TheWheel.png",
-    "filetype": "img",
-    "text": "Wheel"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Tricycle.png",
-    "filetype": "img",
-    "text": "Tricycle"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Worm.png",
-    "filetype": "img",
-    "text": "Worm"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Mpreg.png",
-    "filetype": "img",
-    "text": "MPREG"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/Mpreg_w_banner.png",
-    "filetype": "img",
-    "text": "Quadruplets"
-  },
-  {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/monolith.png",
-    "filetype": "img",
-    "text": "Monolith"
-  },
-  {
-    "fileext": "png",
     "filepath": "res://Assets/Sprites/FellForItAgainAward.png",
-    "filetype": "img",
+    "fileext": "png",
     "text": "Fell For It Again Award"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/woolybean.png",
     "filetype": "img",
+    "filepath": "res://Assets/Sprites/FriedChicken.png",
+    "fileext": "png",
+    "text": "Fried Chicken"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/Frog.png",
+    "fileext": "png",
+    "text": "Frog"
+  },
+  {
+    "filetype": "vid",
+    "filepath": "res://Assets/Videos/Fur.webm",
+    "fileext": "webm",
+    "text": "Furry",
+    "chromacolor": "(0.0118, 0.0118, 0.0118, 1.0)",
+    "pickuprange": 0.1,
+    "fadeamount": 0.1
+  },
+  {
+    "filetype": "vid",
+    "filepath": "res://Assets/Videos/Gamma.webm",
+    "fileext": "webm",
+    "text": "Gamma",
+    "chromacolor": "(1.0, 1.0, 1.0, 0.0)",
+    "pickuprange": 0.1,
+    "fadeamount": 0.1
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/Goat.png",
+    "fileext": "png",
+    "text": "Goat"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/hundredline.png",
+    "fileext": "png",
+    "text": "Hundredline"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/monolith.png",
+    "fileext": "png",
+    "text": "Monolith"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/Mpreg.png",
+    "fileext": "png",
+    "text": "Mpreg"
+  },
+  {
+    "filetype": "vid",
+    "filepath": "res://Assets/Videos/videoshortersmall.webm",
+    "fileext": "webm",
+    "text": "Mpreg",
+    "chromacolor": "(0.0863, 0.9961, 0.0588, 1.0)",
+    "pickuprange": 0.5,
+    "fadeamount": 0.35
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/Mpreg_w_banner.png",
+    "fileext": "png",
+    "text": "Mpreg W Banner"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/PurpleCat.png",
+    "fileext": "png",
+    "text": "Purple Cat"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/Rock.png",
+    "fileext": "png",
+    "text": "Rock"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/SeaOtter.png",
+    "fileext": "png",
+    "text": "Sea Otter"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/Steel(ish)Rabbit.png",
+    "fileext": "png",
+    "text": "Steel(ish)Rabbit"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/TheWheel.png",
+    "fileext": "png",
+    "text": "The Wheel"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/TommyHONKNoEffect.png",
+    "fileext": "png",
+    "text": "Tommy HONKNo Effect"
+  },
+  {
+    "filetype": "vid",
+    "filepath": "res://Assets/Videos/Train.webm",
+    "fileext": "webm",
+    "text": "Train",
+    "chromacolor": "(0.0000, 0.0000, 0.0000, 1.0)",
+    "pickuprange": 0.01,
+    "fadeamount": 0.1
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/Tricycle.png",
+    "fileext": "png",
+    "text": "Tricycle"
+  },
+  {
+    "filetype": "vid",
+    "filepath": "res://Assets/Videos/WhiteSedan.webm",
+    "fileext": "webm",
+    "text": "White Sedan",
+    "chromacolor": "(0.0078, 0.0078, 0.0078, 1.0)",
+    "pickuprange": 0.01,
+    "fadeamount": 0.1
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/woolybean.png",
+    "fileext": "png",
     "text": "Woolybean"
   },
   {
-    "fileext": "png",
-    "filepath": "res://Assets/Sprites/hundredline.png",
     "filetype": "img",
-    "text": "Hundred Line"
+    "filepath": "res://Assets/Sprites/Worm.png",
+    "fileext": "png",
+    "text": "Worm"
   }
 ]

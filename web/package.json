@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "list": "node scripts/list.mjs",
+    "sync": "node scripts/sync.mjs",
+    "deploy": "node scripts/sync.mjs --bundle && cd ../worker && npx wrangler deploy"
   },
   "devDependencies": {
     "typescript": "^5.6.0",
