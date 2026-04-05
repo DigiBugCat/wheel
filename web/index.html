@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebWheel</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="stage">
+      <img id="wheel" src="/Assets/Sprites/wheel.png" alt="" />
+      <div id="label" hidden></div>
+      <img id="image-result" hidden alt="" />
+      <img id="audio-placeholder" src="/Assets/Sprites/musicnotes.png" hidden alt="" />
+      <canvas id="video-canvas" hidden></canvas>
+      <video id="video" playsinline hidden></video>
+      <audio id="audio"></audio>
+      <audio id="sfx-roll" src="/Assets/Audio/SFX/RollingSound.wav" preload="auto"></audio>
+      <audio id="sfx-get" src="/Assets/Audio/SFX/GetSound.wav" preload="auto"></audio>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+#stage > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#wheel {
+  width: 512px;
+  height: 512px;
+  transform-origin: 50% 50%;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+}
+
+#image-result,
+#audio-placeholder {
+  max-width: 80vw;
+  max-height: 80vh;
+  user-select: none;
+  pointer-events: none;
+}
+
+#video-canvas {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#video {
+  display: none;
+}
+
+/* Rainbow-wave label, ported from Godot's [wave][rainbow] BBCode */
+#label {
+  position: absolute;
+  left: 50%;
+  bottom: 16%;
+  transform: translateX(-50%);
+  font-size: 56px;
+  font-weight: 900;
+  text-align: center;
+  padding: 16px 32px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  white-space: pre;
+  line-height: 1.1;
+}
+
+#label[hidden] {
+  display: none;
+}
+
+.rw-char {
+  display: inline-block;
+  animation: rw-wave 1.2s ease-in-out infinite, rw-rainbow 1.2s linear infinite;
+}
+
+@keyframes rw-wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes rw-rainbow {
+  0%   { color: hsl(0,   100%, 60%); }
+  16%  { color: hsl(60,  100%, 60%); }
+  33%  { color: hsl(120, 100%, 60%); }
+  50%  { color: hsl(180, 100%, 60%); }
+  66%  { color: hsl(240, 100%, 60%); }
+  83%  { color: hsl(300, 100%, 60%); }
+  100% { color: hsl(360, 100%, 60%); }
+}
