@@ -31,7 +31,11 @@ var spin_results : Array
 var video_stream
 var file_type
 
+var spin
 var video_shader_material = null
+
+var file_path
+var asset_loaded := false
 
 func _ready() -> void:
 	WHEEL_TIMER.timeout.connect(roll_result)
@@ -39,8 +43,20 @@ func _ready() -> void:
 	wheel_result = randi_range(0, spin_results.size() - 1)
 	prepare_result(wheel_result)
 	
+func _process(_delta: float) -> void:
+	if (!asset_loaded && ResourceLoader.load_threaded_get_status(file_path) == 1.0):
+		load_result()
+		asset_loaded = true
+	
 func roll_result():
 	WHEEL.hide()
+	
+	if (!asset_loaded):
+		#This should never happen, but if it did, your file is probably too big.
+		#Or your computer is VERY slow.
+		load_result()
+		asset_loaded = true
+		
 	play_text()
 	
 func play_result():
@@ -99,40 +115,57 @@ func load_json_results():
 	
 #This actually LOADS the result pre-emptively. It should run while the wheel spins.
 func prepare_result(wheel_result_id):
-	var spin = spin_results[wheel_result_id]
+	spin = spin_results[wheel_result_id]
 	file_type = spin[SpinResultGenerator.FILETYPE]
+	file_path = spin[SpinResultGenerator.FILEPATH]
 	
 	var formatted_text = "[wave][rainbow]" + spin[SpinResultGenerator.TEXT] + "[/rainbow][/wave]"
 	TEXTLABEL.set_text(formatted_text)
 	
 	if(file_type == SpinResultGenerator.VIDEO):
-		load_video(spin)
+		load_video()
 	if(file_type == SpinResultGenerator.AUDIO):
-		load_audio(spin)
+		load_audio()
 	if(file_type == SpinResultGenerator.IMAGE):
-		load_sprite(spin)
+		load_sprite()
+		
+func load_result():
+	if(file_type == SpinResultGenerator.VIDEO):
+		video_loaded()
+	if(file_type == SpinResultGenerator.AUDIO):
+		audio_loaded()
+	if(file_type == SpinResultGenerator.IMAGE):
+		sprite_loaded()
+		
 	
-func load_video(spin_data):
-	var video_filepath = ResourceLoader.load(spin_data[SpinResultGenerator.FILEPATH])
-	var color = SpinResultGenerator.parse_color_vector_string(spin_data[SpinResultGenerator.COLOR])
+#An optimization I could (And should) make: Separate loading the resouce and actually 
+func load_video():
+	ResourceLoader.load_threaded_request(file_path)
+	
+func video_loaded():
+	var video_filepath = ResourceLoader.load_threaded_get(file_path)
+	var color = SpinResultGenerator.parse_color_vector_string(spin[SpinResultGenerator.COLOR])
 	video_stream = video_filepath
 	
 	video_shader_material = ShaderMaterial.new()
 	video_shader_material.set_shader(GREENSCREEN_SHADER)
 	video_shader_material.set(SpinResultGenerator.CHROMA_COLOR, color)
-	video_shader_material.set(SpinResultGenerator.PICKUP_RANGE, spin_data[SpinResultGenerator.PICKUP])
-	video_shader_material.set(SpinResultGenerator.FADE_AMOUNT, spin_data[SpinResultGenerator.FADE])
+	video_shader_material.set(SpinResultGenerator.PICKUP_RANGE, spin[SpinResultGenerator.PICKUP])
+	video_shader_material.set(SpinResultGenerator.FADE_AMOUNT, spin[SpinResultGenerator.FADE])
 	
+func load_audio():
+	ResourceLoader.load_threaded_request(file_path)
 	
-func load_audio(spin_data):
-	var audio_filepath = ResourceLoader.load(spin_data[SpinResultGenerator.FILEPATH])
+func audio_loaded():
+	var audio_filepath = ResourceLoader.load_threaded_get(file_path)
 	var file_audio_stream = audio_filepath
-		
 	AUDIOPLAYER.set_stream(file_audio_stream)
 	
-func load_sprite(spin_data):
-	var img = ResourceLoader.load(spin_data[SpinResultGenerator.FILEPATH])
+func load_sprite():
+	ResourceLoader.load_threaded_request(file_path)
 	
+func sprite_loaded():
+	var img = ResourceLoader.load_threaded_get(file_path)
 	SPRITE.set_texture(img)
 
 func delete_self():

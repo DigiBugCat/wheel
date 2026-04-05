@@ -1,4 +1,4 @@
-class_name WheelSpin extends Sprite2D
+class_name WheelSpin2D extends Sprite2D
 
 @onready var SOUNDPLAYER = %WheelSound
 @onready var STARTTIMER = %WheelTimer
