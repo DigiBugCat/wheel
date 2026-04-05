@@ -1,3 +1,14 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Node / Vite
+node_modules/
+web/node_modules/
+web/dist/
+
+# Cloudflare
+.wrangler/
+
+# OS
+.DS_Store
