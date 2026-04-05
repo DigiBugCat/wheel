@@ -50,8 +50,8 @@ export default {
 		const ext = '.' + key.split('.').pop().toLowerCase();
 		const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-		// Hashed asset files (in /assets/) can be cached aggressively; everything else briefly.
-		const cacheControl = key.startsWith('assets/')
+		// Hashed bundle files (in /_bundle/) can be cached aggressively; everything else briefly.
+		const cacheControl = key.startsWith('_bundle/')
 			? 'public, max-age=31536000, immutable'
 			: 'public, max-age=300';
 
