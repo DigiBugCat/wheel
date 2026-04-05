@@ -141,35 +141,58 @@ if (!DRY) {
  * Walk existing results.json; for every video with a non-transparent chromacolor,
  * write a .meta.json sidecar next to the file if one doesn't already exist.
  */
+/**
+ * Migrate any per-asset config in the existing results.json into .meta.json sidecars:
+ *   - Custom text labels (whenever the label differs from what prettyLabel() would generate)
+ *   - Video chromakey settings
+ */
 function migrateChromaToSidecars(dry) {
   if (!existsSync(RESULTS_PATH)) return;
   const existing = JSON.parse(readFileSync(RESULTS_PATH, "utf8"));
   let migrated = 0;
   for (const r of existing) {
-    if (r.filetype !== "vid") continue;
-    if (!r.chromacolor) continue;
-    // Skip the NOGREENSCREEN sentinel — no real chroma to preserve.
-    if (/^\(1\.0,\s*1\.0,\s*1\.0,\s*0\.0\)$/.test(r.chromacolor)) continue;
-
     const relPath = r.filepath.replace(/^res:\/\//, "");
-    const videoPath = join(PUBLIC_DIR, relPath);
-    const metaPath = videoPath + ".meta.json";
+    const assetPath = join(PUBLIC_DIR, relPath);
+    if (!existsSync(assetPath)) continue; // file gone, skip
+    const metaPath = assetPath + ".meta.json";
     if (existsSync(metaPath)) continue;
-    if (!existsSync(videoPath)) continue; // file gone, skip
 
-    const meta = {
-      text: r.text,
-      chroma: godotColorToHex(r.chromacolor),
-      pickup: r.pickuprange ?? 0.1,
-      fade: r.fadeamount ?? 0.1,
-    };
+    const meta = {};
+
+    // Preserve custom text label if it differs from the derived one.
+    const baseName = relPath.split("/").pop().replace(/\.[^.]+$/, "");
+    const derived = derivedLabel(baseName);
+    if (r.text && r.text !== derived) meta.text = r.text;
+
+    // Preserve video chromakey settings (unless it's the NOGREENSCREEN sentinel).
+    if (r.filetype === "vid" && r.chromacolor) {
+      if (!/^\(1\.0,\s*1\.0,\s*1\.0,\s*0\.0\)$/.test(r.chromacolor)) {
+        meta.chroma = godotColorToHex(r.chromacolor);
+        meta.pickup = r.pickuprange ?? 0.1;
+        meta.fade = r.fadeamount ?? 0.1;
+      }
+    }
+
+    if (Object.keys(meta).length === 0) continue;
     if (!dry) writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
-    console.log(`  ${dry ? "[dry] " : ""}migrate ${relPath} -> ${relPath}.meta.json`);
+    console.log(`  ${dry ? "[dry] " : ""}migrate ${relPath} -> ${relPath}.meta.json (${Object.keys(meta).join(", ")})`);
     migrated++;
   }
   if (migrated > 0) {
-    console.log(`  (${migrated} chromakey configs ${dry ? "would be" : ""} migrated to sidecars)\n`);
+    console.log(`  (${migrated} asset configs ${dry ? "would be" : ""} migrated to sidecars)\n`);
   }
+}
+
+/** Mirror of prettyLabel() in lib.mjs; inlined here so tests stay local. */
+function derivedLabel(filenameNoExt) {
+  return filenameNoExt
+    .replace(/[_\-]+/g, " ")
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .map((w) => (w.length ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(" ");
 }
 
 function godotColorToHex(s) {

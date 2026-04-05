@@ -3,7 +3,7 @@
     "filetype": "img",
     "filepath": "res://Assets/Sprites/BALD.png",
     "fileext": "png",
-    "text": "BALD"
+    "text": "Bald"
   },
   {
     "filetype": "aud",
@@ -27,7 +27,7 @@
     "filetype": "img",
     "filepath": "res://Assets/Sprites/Birb.png",
     "fileext": "png",
-    "text": "Birb"
+    "text": "Bird"
   },
   {
     "filetype": "img",
@@ -49,15 +49,21 @@
   },
   {
     "filetype": "img",
-    "filepath": "res://Assets/Sprites/FellForItAgainAward.png",
+    "filepath": "res://Assets/Sprites/PurpleCat.png",
     "fileext": "png",
-    "text": "Fell For It Again Award"
+    "text": "Cat"
   },
   {
     "filetype": "img",
     "filepath": "res://Assets/Sprites/FriedChicken.png",
     "fileext": "png",
-    "text": "Fried Chicken"
+    "text": "Chicken"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/FellForItAgainAward.png",
+    "fileext": "png",
+    "text": "Fell For It Again Award"
   },
   {
     "filetype": "img",
@@ -91,21 +97,21 @@
   },
   {
     "filetype": "img",
+    "filepath": "res://Assets/Sprites/TommyHONKNoEffect.png",
+    "fileext": "png",
+    "text": "Gun"
+  },
+  {
+    "filetype": "img",
     "filepath": "res://Assets/Sprites/hundredline.png",
     "fileext": "png",
-    "text": "Hundredline"
+    "text": "Hundred Line"
   },
   {
     "filetype": "img",
     "filepath": "res://Assets/Sprites/monolith.png",
     "fileext": "png",
     "text": "Monolith"
-  },
-  {
-    "filetype": "img",
-    "filepath": "res://Assets/Sprites/Mpreg.png",
-    "fileext": "png",
-    "text": "Mpreg"
   },
   {
     "filetype": "vid",
@@ -118,15 +124,15 @@
   },
   {
     "filetype": "img",
-    "filepath": "res://Assets/Sprites/Mpreg_w_banner.png",
+    "filepath": "res://Assets/Sprites/Mpreg.png",
     "fileext": "png",
-    "text": "Mpreg W Banner"
+    "text": "MPREG"
   },
   {
     "filetype": "img",
-    "filepath": "res://Assets/Sprites/PurpleCat.png",
+    "filepath": "res://Assets/Sprites/Mpreg_w_banner.png",
     "fileext": "png",
-    "text": "Purple Cat"
+    "text": "Quadruplets"
   },
   {
     "filetype": "img",
@@ -144,19 +150,7 @@
     "filetype": "img",
     "filepath": "res://Assets/Sprites/Steel(ish)Rabbit.png",
     "fileext": "png",
-    "text": "Steel(ish)Rabbit"
-  },
-  {
-    "filetype": "img",
-    "filepath": "res://Assets/Sprites/TheWheel.png",
-    "fileext": "png",
-    "text": "The Wheel"
-  },
-  {
-    "filetype": "img",
-    "filepath": "res://Assets/Sprites/TommyHONKNoEffect.png",
-    "fileext": "png",
-    "text": "Tommy HONKNo Effect"
+    "text": "Steel Rabbit"
   },
   {
     "filetype": "vid",
@@ -172,6 +166,12 @@
     "filepath": "res://Assets/Sprites/Tricycle.png",
     "fileext": "png",
     "text": "Tricycle"
+  },
+  {
+    "filetype": "img",
+    "filepath": "res://Assets/Sprites/TheWheel.png",
+    "fileext": "png",
+    "text": "Wheel"
   },
   {
     "filetype": "vid",
